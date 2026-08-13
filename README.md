@@ -1,19 +1,17 @@
-# Comic Cam
+# Comic Cam Suit-Up
 
-Native Android prototype for a single flagship **Comic Shift** camera effect. The app opens into a CameraX front-camera preview and layers an interactive cyberpunk comic transition over the live feed.
+Native Kotlin/Compose Android prototype for a gesture-controlled AR suit-up camera. The app uses a CameraX front-camera stream rendered through an OpenGL ES surface and scaffolds the MediaPipe-driven hand, pose, and segmentation pipeline needed for a Spider-Verse-style reveal effect without hardcoding a single character.
 
-## MVP implemented
+## Implemented in this pass
 
-- CameraX preview with front camera binding.
-- ML Kit selfie segmentation analyzer wired at preview time to produce a person-mask signal.
-- Explicit `ComicShiftState` state machine and normalized `transitionProgress`.
-- Reusable `ComicPanel` model with geometry, transform, border, content, opacity, and animation progress fields.
-- Drag/swipe gesture tracking for finger position, deltas, velocity, and duration.
-- One-to-three horizontal comic panels that progressively enter as the transition increases.
-- Original procedural cyberpunk comic background with neon city silhouettes.
-- Halftone dots, RGB split glow, speed lines, finger glow, and full-comic color wash.
-- Modular shader assets for posterization, edge detection, halftone, RGB split, glow, motion smear, and color grading.
+- CameraX front-camera binding to a GL `SurfaceTexture` / external OES texture path.
+- MVVM UI with Compose, `StateFlow`, and a permission gate.
+- Reveal gesture state machine with tunable thresholds in `GestureConfig.kt`.
+- ML wrapper classes for hand, pose, and segmentation streams plus throttled frame dispatch.
+- Theme repository backed by `assets/themes/*.json` and DataStore selection persistence.
+- Theme picker carousel with three starter theme manifests.
+- GPU shader assets for camera passthrough, costume warp, silhouette masking, and boundary glow.
 
-## Notes
+## Validation note
 
-The current renderer uses Compose Canvas as the visible MVP compositor while the shader assets and camera/segmentation pipeline are scaffolded for a future dedicated OpenGL/Surface renderer. Full video recording and physical-device validation are intentionally left for later phases.
+A physical Android device is required for final acceptance. Emulator camera input is not sufficient to validate real-time gesture latency, MediaPipe GPU delegate behavior, or sustained camera/render FPS.
