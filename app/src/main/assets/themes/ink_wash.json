@@ -1,0 +1,14 @@
+{
+  "id": "ink_wash",
+  "displayName": "Ink-Wash Ronin",
+  "costumeTexture": "themes/ink_wash/costume.png",
+  "maskTexture": "themes/ink_wash/mask.png",
+  "normalMap": "themes/ink_wash/normal.png",
+  "thumbnail": "themes/ink_wash/thumbnail.png",
+  "accentColorHex": "#F4F1DE",
+  "glowColorHex": "#111111",
+  "particleColorHex": "#E07A5F",
+  "transformSoundFile": "themes/ink_wash/transform.ogg",
+  "idleAnimation": "eye_glow_pulse",
+  "artStyle": "comic_ink"
+}

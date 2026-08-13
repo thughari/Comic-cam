@@ -1,0 +1,14 @@
+{
+  "id": "arachnid_2099",
+  "displayName": "Arachnid 2099",
+  "costumeTexture": "themes/arachnid_2099/costume.png",
+  "maskTexture": "themes/arachnid_2099/mask.png",
+  "normalMap": "themes/arachnid_2099/normal.png",
+  "thumbnail": "themes/arachnid_2099/thumbnail.png",
+  "accentColorHex": "#7A1FE0",
+  "glowColorHex": "#FF2A2A",
+  "particleColorHex": "#B23AFF",
+  "transformSoundFile": "themes/arachnid_2099/transform.ogg",
+  "idleAnimation": "eye_glow_pulse",
+  "artStyle": "comic_ink"
+}

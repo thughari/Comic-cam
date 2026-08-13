@@ -1,0 +1,2 @@
+#version 300 es
+precision mediump float; uniform sampler2D uScene; uniform float uBoundaryY; uniform float uTime; uniform vec3 uGlowColor; in vec2 vUv; out vec4 fragColor; void main(){ float d=abs(vUv.y-uBoundaryY); float seam=smoothstep(0.045,0.0,d); vec2 jitter=vec2(sin(vUv.y*180.0+uTime*12.0)*0.003*seam,0.0); vec3 color=texture(uScene,vUv+jitter).rgb; color += uGlowColor*seam; fragColor=vec4(color,1.0); }

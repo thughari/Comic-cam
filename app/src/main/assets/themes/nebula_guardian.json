@@ -1,0 +1,14 @@
+{
+  "id": "nebula_guardian",
+  "displayName": "Nebula Guardian",
+  "costumeTexture": "themes/nebula_guardian/costume.png",
+  "maskTexture": "themes/nebula_guardian/mask.png",
+  "normalMap": "themes/nebula_guardian/normal.png",
+  "thumbnail": "themes/nebula_guardian/thumbnail.png",
+  "accentColorHex": "#00D4FF",
+  "glowColorHex": "#00FFB3",
+  "particleColorHex": "#68D8FF",
+  "transformSoundFile": "themes/nebula_guardian/transform.ogg",
+  "idleAnimation": "eye_glow_pulse",
+  "artStyle": "comic_ink"
+}
